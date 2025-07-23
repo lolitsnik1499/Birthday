@@ -1,0 +1,156 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 /* --- Basic Setup & Variables --- */\
+:root \{\
+    --bg-color: #1a082d;\
+    --primary-color: #f3a6ff;\
+    --secondary-color: #a787ff;\
+    --glow-color: #e57aff;\
+    --text-color: #f0e8ff;\
+    --heading-font: 'Playfair Display', serif;\
+    --body-font: 'Poppins', sans-serif;\
+    --script-font: 'Dancing Script', cursive;\
+\}\
+\
+* \{\
+    margin: 0;\
+    padding: 0;\
+    box-sizing: border-box;\
+    scroll-behavior: smooth;\
+\}\
+\
+body \{\
+    background-color: var(--bg-color);\
+    color: var(--text-color);\
+    font-family: var(--body-font);\
+    overflow-x: hidden;\
+\}\
+\
+/* --- Backgrounds and Particles --- */\
+.background-video \{\
+    position: fixed;\
+    top: 0;\
+    left: 0;\
+    width: 100%;\
+    height: 100vh;\
+    object-fit: cover;\
+    z-index: -2;\
+    opacity: 0.3;\
+\}\
+\
+#tsparticles \{\
+    position: fixed;\
+    width: 100%;\
+    height: 100%;\
+    z-index: -1;\
+\}\
+\
+/* --- Hero Section --- */\
+.hero \{\
+    height: 100vh;\
+    display: flex;\
+    flex-direction: column;\
+    justify-content: center;\
+    align-items: center;\
+    text-align: center;\
+    padding: 20px;\
+    position: relative;\
+    background: radial-gradient(circle, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.8) 80%);\
+\}\
+\
+.hero h1 \{\
+    font-family: var(--heading-font);\
+    font-size: clamp(2.5rem, 8vw, 5rem);\
+    color: var(--primary-color);\
+    text-shadow: 0 0 15px var(--glow-color), 0 0 30px var(--glow-color);\
+    animation: fadeInDown 1.5s ease-out;\
+\}\
+\
+.hero p \{\
+    font-size: clamp(1rem, 3vw, 1.5rem);\
+    margin-top: 20px;\
+    max-width: 600px;\
+    font-weight: 300;\
+    animation: fadeInUp 1.5s ease-out;\
+\}\
+\
+.scroll-down \{\
+    position: absolute;\
+    bottom: 30px;\
+    color: white;\
+    animation: bounce 2s infinite, fadeIn 2s ease-out;\
+\}\
+\
+.scroll-down svg \{\
+    transition: transform 0.3s ease;\
+\}\
+\
+.scroll-down:hover svg \{\
+    transform: translateY(5px);\
+\}\
+\
+/* --- Content Sections --- */\
+.content-section \{\
+    padding: 100px 5%;\
+    max-width: 1200px;\
+    margin: 0 auto;\
+    background: rgba(26, 8, 45, 0.6);\
+    backdrop-filter: blur(10px);\
+    border-radius: 20px;\
+    margin-bottom: 50px;\
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);\
+    border: 1px solid rgba(255, 255, 255, 0.1);\
+\}\
+\
+h2 \{\
+    font-family: var(--heading-font);\
+    font-size: clamp(2rem, 5vw, 3rem);\
+    text-align: center;\
+    margin-bottom: 50px;\
+    color: var(--secondary-color);\
+    text-shadow: 0 0 10px var(--secondary-color);\
+\}\
+\
+/* --- Photo Gallery --- */\
+.photo-grid \{\
+    display: grid;\
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));\
+    gap: 25px;\
+\}\
+\
+.photo-card \{\
+    position: relative;\
+    border-radius: 15px;\
+    overflow: hidden;\
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);\
+    transition: transform 0.4s ease, box-shadow 0.4s ease;\
+\}\
+\
+.photo-card:hover \{\
+    transform: translateY(-10px) scale(1.03);\
+    box-shadow: 0 0 30px var(--glow-color);\
+\}\
+\
+.photo-card img \{\
+    width: 100%;\
+    height: 100%;\
+    object-fit: cover;\
+    display: block;\
+\}\
+\
+.photo-card .caption \{\
+    position: absolute;\
+    bottom: 0;\
+    left: 0;\
+    width: 100%;\
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);\
+    color: white;\
+    padding: 30px 15px 15px;\
+    font-size: 1rem;\
+    opacity: 0;\
+    transform: translateY(2}
